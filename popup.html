@@ -11,10 +11,121 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script type="text/javascript" src="/chs.js"></script>
         <script>
-            
+            var NUM_ROWS = 8;
+var BRICK_TOP_OFFSET = 10;
+var BRICK_SPACING = 2;
+var NUM_BRICKS_PER_ROW = 10;
+var BRICK_HEIGHT = 10;
+var SPACE_FOR_BRICKS = getWidth() - (NUM_BRICKS_PER_ROW + 1) * BRICK_SPACING;
+var BRICK_WIDTH = SPACE_FOR_BRICKS / NUM_BRICKS_PER_ROW;
+
+var PADDLE_WIDTH = 80;
+var PADDLE_HEIGHT = 15;
+var PADDLE_OFFSET = 10;
+var paddle;
+paddle = new Rectangle(PADDLE_WIDTH,PADDLE_HEIGHT);
+
+
+var target;
+
+var txt = new Text("Oops!", "30pt Arial");
+txt.setPosition(200,200);
+
+
+var BALL_RADIUS = 15;
+
+var element;
+var element2;
+
+var ball;
+var dx = 3;
+var dy = 3;
+var cx = 3;
+
+function start(){
+	ball = new Circle(BALL_RADIUS);
+	ball.setPosition(100, 100);
+	add(ball);
+	add(paddle);
+	drawTargets();
+	setTimer(draw, 20);
+	mouseMoveMethod(drawPaddle);
+}
+
+function draw(){
+	checkWalls();
+	ball.move(dx, dy);
+	target.move(2*cx,0);
+}
+
+function checkWalls(){
+	
+	if(ball.getX() + ball.getRadius() > getWidth()){
+		dx = -dx;
+	}
+	if(target.getX() + target.getRadius() > getWidth()){
+		cx = -cx;
+	}
+	
+	if(ball.getX() - ball.getRadius() < 0){
+		dx = -dx;
+	}
+	if(target.getX() - target.getRadius() < 0){
+		cx = -cx;
+	}
+	
+	if(ball.getY() + ball.getRadius() > getHeight()){
+		remove(ball);
+		add(txt);
+	}
+
+	if(ball.getY() - ball.getRadius() < 0){
+		dy = -dy;
+	}
+	
+    element = getElementAt(ball.getX(),ball.getY());
+	if(element != null && element != ball){
+	    dx = -dx;
+	    dy = -dy;
+	}
+	element2 = getElementAt(target.getX(),target.getY());
+	if(element != null && element == target){
+	   remove(element2);
+	}
+}
+
+function drawPaddle(e){
+    paddle.setPosition(e.getX(),getHeight() - PADDLE_HEIGHT - PADDLE_OFFSET);
+   
+    if (e.getX() > getWidth()){
+        paddle.setPosition(getWidth() - PADDLE_WIDTH,getHeight() - PADDLE_HEIGHT - PADDLE_OFFSET );
+    }
+}
+
+function drawTargets(){
+    target = new Circle(10);
+    target.setColor(Color.red);
+    target.setPosition(20,20);
+    add(target);
+
+    
+}
         </script>
+        <style>
+            canvas{
+                border: 1px solid black;
+            }
     </head>
     <body>
-        <h1>load failed</h1>
+        <div id="canvasContainer" width="100%" style="width: 100%;height: 100%;overflow: hidden;">
+                <canvas width="400" height="500" class="codehs-editor-canvas"></canvas>
+        </div>
+        <script>
+            window.onload=function(){
+                if(typeofstart==='function'){
+                    start();
+                }
+            };
+        </script>
     </body>
 </html>
