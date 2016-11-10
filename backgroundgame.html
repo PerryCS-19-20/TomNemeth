@@ -9,8 +9,10 @@
         changeBG("dog-knife.jpg");
       }
       
-      function changeBG(){
-        document.body.style.background=
+      function changeBG(docName){
+        document.body.style.background-image: url(docName);
+      }
+    </script>
   </head>
   <body>
     <header>Tom Nemeth</header>
@@ -21,5 +23,6 @@
       <li><a href="contact.html">Contact</a></li>
       <li><a href="breakout.html">Breakout</a></li>
     </ul>
+    <span onmouseover="mouseover();">If you touch this, you will make a dog very angry"</span>
   </body>
 <html>
