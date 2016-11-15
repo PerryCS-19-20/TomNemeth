@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		<span id="s1" onclick="clicked();">Hello</span>
+		<script>
+			function clicked() {
+				var theSpan = document.getElementById("s1");
+				theSpan.innerHTML = "By using <b>.innerHTML</b> you can: \
+				             <ul> \
+      						 <li>add any HTML you want to an element</li> \
+					         <li>replace an entire branch of the tree</li></ul>";
+			}
+		</script>
+	</body>
+</html>
