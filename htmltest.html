@@ -3,15 +3,13 @@
 	<head>
 	</head>
 	<body>
-		<span id="s1" onclick="clicked();">Hello</span>
+		<textarea rows="10" cols="80" id="inputText">Input html to test here</textarea>
+		<button onclick="testHTML();">test!</button>
+		<span>Hello</span>
 		<script>
-			function clicked() {
-				var theSpan = document.getElementById("s1");
-				theSpan.innerHTML = "By using <b>.innerHTML</b> you can: \
-				             <ul> \
-      						 <li>add any HTML you want to an element</li> \
-					         <li>replace an entire branch of the tree</li></ul>";
+			function testHTML() {
+				var userInput = document.getElementById("inputText");
+				var span.innerHTML = userInput.value;
 			}
-		</script>
 	</body>
 </html>
