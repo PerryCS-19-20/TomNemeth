@@ -20,13 +20,12 @@
       <li><a href="htmltest.html">TEST HTML</a></li>
     </ul>
     <img src="squelette-banjo.gif">
-    <p>Press this button to make the website beautiful!!</p>
-    <button onclick="comicsans();">Press me!</button>
+    <span id="s1">Press this button</span>
+    <button onclick="makered();">Press me!</button>
     <script>
-			function comicsans() {
-				var comic = document.body.style.fontfamily;
-				theSpan.innerHTML = userInput.value;
-			}
-		</script>
+	function makered() {
+		document.getElementById("s1").style.color = "red";
+	}
+    </script>
   </body>
 <html>
