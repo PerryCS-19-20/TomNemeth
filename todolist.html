@@ -4,8 +4,8 @@
         <title>To Do list</title>
     </head>
     <body>
-        <textarea rows="10" cols="80" id="inputText">Input html to test here</textarea>
-		<button onclick="testhtml();">test!</button>
+        <textarea rows="10" cols="80" id="inputText">Write a task here</textarea>
+	<button onclick="testhtml();">add!</button>
 		<script>
 			function testhtml() {
 				var userInput = document.getElementById("inputText");
@@ -13,6 +13,8 @@
 				theSpan.innerHTML = userInput.value;
 			}
 		</script>
-        <p id="s1">Hello</p>
+        <ul id="s1">
+		<li>Hello</li>
+	</ul>
     </body>
 </html>
