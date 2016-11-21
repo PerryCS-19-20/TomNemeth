@@ -33,27 +33,29 @@
     
     <table>
       <tr>
-        <td id="1" onclick="play('1');">x</td>
-        <td id="2" onclick="play('2');">o</td>
-        <td id="3" onclick="play('3');">x</td>
+        <td id="1" onclick="play('1');"></td>
+        <td id="2" onclick="play('2');"></td>
+        <td id="3" onclick="play('3');"></td>
       </tr>
       <tr>
-        <td id="4" onclick="play('4');">o</td>
-        <td id="5" onclick="play('5');">x</td>
-        <td id="6" onclick="play('6');">o</td>
+        <td id="4" onclick="play('4');"></td>
+        <td id="5" onclick="play('5');"></td>
+        <td id="6" onclick="play('6');"></td>
       </tr>
       <tr>
-        <td id="7" onclick="play('7');">x</td>
-        <td id="8" onclick="play('8');">x</td>
-        <td id="9" onclick="play('9');">o</td>
+        <td id="7" onclick="play('7');"></td>
+        <td id="8" onclick="play('8');"></td>
+        <td id="9" onclick="play('9');"></td>
       </tr>
     </table>
      
     <script>
-      var player= "X";
+      var player= "x";
       
       function play(num) {
-        var num = document.getElementById();
+        var fill = document.getElementById(num);
+        if(cell.textContent==""){
+          cell.textContent = "x"
     
   </body>
 <html>
