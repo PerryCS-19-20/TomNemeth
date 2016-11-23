@@ -57,7 +57,7 @@
       
       function play(num) {        
         checkWin();
-        if(document.getElementById(num).innerHTML == "") && (won == false) {    
+        if((document.getElementById(num).innerHTML == "") && (won == false)) {    
           if(player % 2 == 0){
             document.getElementById(num).innerHTML = "o"
           }else{
@@ -73,7 +73,7 @@
       var c2 = document.getElementById(c2id);
       var c3 = document.getElementById(c3id);
       
-      if(c1.textContent == c2.textContent) && (c2.textContent == c3.textContent) && (c1.textContent != ""){
+      if((c1.textContent == c2.textContent) && (c2.textContent == c3.textContent) && (c1.textContent != "")){
         won = true;
       }
     }
