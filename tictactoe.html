@@ -55,14 +55,15 @@
      var player = 1;
       
       function play(num) {        
-        if(player % 2 == 0){
-          document.getElementById(num).innerHTML = "o"
-        }else{
-          document.getElementById(num).innerHTML = "x"
+        if(document.getElementById(num).innerHTML = "") {    
+          if(player % 2 == 0){
+            document.getElementById(num).innerHTML = "o"
+          }else{
+            document.getElementById(num).innerHTML = "x"
+          }
+          player++;
         }
-        player++;
       }
-      
       
           
     </script>
