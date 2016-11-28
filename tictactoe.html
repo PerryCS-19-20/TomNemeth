@@ -67,7 +67,10 @@
           }
           player++;
         }else if(won == true){
-          alert('winner!');
+          if(player % 2 == 0){
+            alert('X is the winner!');
+          }else{
+            alert('O is the winner!');
         }
       }
       
