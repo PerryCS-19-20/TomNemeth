@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		<textarea rows="10" cols="80" id="inputText">Input html to test here</textarea>
+		<button onclick="testhtml();">test!</button>
+		<script>
+			function testhtml() {
+				var userInput = document.getElementById("inputText");
+				var theSpan = document.getElementById("s1");
+				theSpan.innerHTML = userInput.value;
+			}
+		</script>
+    <span id="s1">Chalkboard</span>
+	</body>
+</html>
