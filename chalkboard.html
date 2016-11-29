@@ -9,15 +9,15 @@
 		<script>
 			function add() {
 				var userInput = document.getElementById("inputText");
-				var newItem = document.createElement("li");
-				newItem.innerHTML = userInput.value;
 				for(var i = 0; i < 100; i++){
+					var newItem = document.createElement("li");
+					newItem.innerHTML = userInput.value;
 					list.appendChild(newItem);
 				}
 			}
 		</script>
         <ul id="list">
-		<li>Feed the dog</li>
+		<li></li>
 	</ul>
     </body>
 </html>
