@@ -1,17 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-	</head>
-	<body>
-		<textarea rows="10" cols="80" id="inputText">Input html to test here</textarea>
-		<button onclick="testhtml();">test!</button>
+    <head>
+        <title>To Do list</title>
+    </head>
+    <body>
+        <textarea rows="10" cols="80" id="inputText">Write this 100 times</textarea>
+	<button onclick="add();">add!</button>
 		<script>
-			function testhtml() {
+			function add() {
 				var userInput = document.getElementById("inputText");
-				var theSpan = document.getElementById("s1");
-				theSpan.innerHTML = userInput.value;
+				var newItem = document.createElement("li");
+				newItem.innerHTML = userInput.value;
+				for(var i = 0; i < 100; i++){
+					list.appendChild(newItem);
+				}
 			}
 		</script>
-    		<span id="s1">Chalkboard</span>
-	</body>
+        <ul id="list">
+		<li>Feed the dog</li>
+	</ul>
+    </body>
 </html>
