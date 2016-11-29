@@ -9,12 +9,15 @@
 		<script>
 			function add() {
 				var userInput = document.getElementById("inputText");
-				var theSpan = document.getElementById("s1");
-				theSpan.innerHTML = userInput.value;
+				var newItem = document.createElement(li);
+				newItem.innerHTML = userInput.value;
+				
+				var list = document.body.ul;
+				list.appendChild(newItem);
 			}
 		</script>
         <ul>
-		<li id="s1">Feed the dog</li>
+		<li>Feed the dog</li>
 	</ul>
     </body>
 </html>
