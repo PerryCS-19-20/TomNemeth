@@ -11,12 +11,10 @@
 				var userInput = document.getElementById("inputText");
 				var newItem = document.createElement("li");
 				newItem.innerHTML = userInput.value;
-				
-				var list = document.ul;
 				list.appendChild(newItem);
 			}
 		</script>
-        <ul>
+        <ul id="list">
 		<li>Feed the dog</li>
 	</ul>
     </body>
