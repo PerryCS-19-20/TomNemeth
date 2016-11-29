@@ -9,10 +9,10 @@
 		<script>
 			function add() {
 				var userInput = document.getElementById("inputText");
-				var newItem = document.createElement(li);
+				var newItem = document.createElement("li");
 				newItem.innerHTML = userInput.value;
 				
-				var list = document.body.ul;
+				var list = document.ul;
 				list.appendChild(newItem);
 			}
 		</script>
