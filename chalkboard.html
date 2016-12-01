@@ -11,7 +11,7 @@
 				var userInput = document.getElementById("inputText");
 				for(var i = 0; i < 100; i++){
 					var newItem = document.createElement("li");
-					newItem.innerHTML = userInput.value;
+					newItem.textContent = userInput.value;
 					list.appendChild(newItem);
 				}
 			}
