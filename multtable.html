@@ -16,15 +16,22 @@
     <body onload="buildTimesTable()">
         <script>
             function buildTimesTable() {
-               document.write("<table>");
-                for(var i = 1; i < 11; i++){
-                    document.write("<tr>");
+               var timesTable = document.createElement("table");
+               var row = document.createElement("tr");
+               var column = document.createElement("td");
+               timesTable.id = "timesTable";
+               row.id = "row";
+               column.id = "column";
+               var body = document.body;
+               
+               body.appendChild(timesTable);
+               
+               for(var i = 1; i < 11; i++){
+                    timesTable.appendChild(row);
                     for(var j = 1; j < 11; j++){
-                       document.write("<td>" + i * j + "</td>");
+                        row.appendChild(column);
                     }
-                document.write("</tr>");
-                }
-               document.write("</table>");        
+               }        
             }
         </script>
     </body>
