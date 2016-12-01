@@ -17,8 +17,6 @@
         <script>
             function buildTimesTable() {
                var timesTable = document.createElement("table");
-               var row = document.createElement("tr");
-               var column = document.createElement("td");
                timesTable.id = "timesTable";
                row.id = "row";
                column.id = "column";
@@ -27,8 +25,10 @@
                body.appendChild(timesTable);
                
                for(var i = 1; i < 11; i++){
+                    var row = document.createElement("tr");
                     timesTable.appendChild(row);
                     for(var j = 1; j < 11; j++){
+                        var column = document.createElement("td");
                         row.appendChild(column);
                     }
                }        
