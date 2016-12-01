@@ -29,9 +29,13 @@
                         var column = document.createElement("td");
                         column.textContent = i * j;
                         row.appendChild(column);
+                        if(j % 3 == 0){
+                            column.textContent.style.color = "red";
+                        }
                     }
                    if(i % 3 == 0){
-                        row.textContent
+                        row.textContent.style.color = "red";
+                   }
                }        
             }
         </script>
