@@ -3,14 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>Cylinder Calc</title>
+        <title>Triangle Calc</title>
         <script>
             function calc() {
                 var h = parseFloat(document.getElementById("height").value);
-                var r = parseFloat(document.getElementById("rad").value);
-                var vol = document.getElementById("vol");
-                var area = Math.PI * r * r;  // Calculate area of bottom circle
-                vol.value = (area * h).toFixed(2);        // Show volume of cylinder
+                var b = parseFloat(document.getElementById("base").value);
+                var are = document.getElementById("area");
+                area.value = (0.5 * b * h).toFixed(2);        // Show volume of cylinder
             }
         </script>
         
@@ -21,14 +20,14 @@
         </style>
     </head>
     <body>
-        <h1>Cylinder volume:</h1>
-        <img src="cylinder.png" style="height: 450px;">
-        <h2>v = h &pi; r <sup>2</sup></h2>
+        <h1>Triangle area:</h1>
+        <img src="dorito.png" style="height: 450px;">
+        <h2>a = (1/2)bh</h2>
         
-        h: <input type="number" id="height" placeholder="height"><br>
-        r: <input type="number" id="rad" placeholder="radius">
-        <button onclick="calc();">Calculate</button>
+        height (h): <input type="number" id="height" placeholder="insert height here"><br>
+        base (b): <input type="number" id="base" placeholder="insert base here">
+        <button onclick="calc();">Calculate the area</button>
         <hr>
-        v: <input type="output" id="vol" placeholder="volume" readonly>
+        area (a): <input type="output" id="area" placeholder="area" readonly>
     </body>
 </html>
