@@ -15,7 +15,7 @@
     </head>
     <body onload="buildTimesTable();">
         <h1>Multiplication Table</h1>
-        Table Width:<input type="range" id="tableWidth" min="1" max="20" value="10" onchange="buildTimesTable();"><br>
+        Table Size:<input type="range" id="tableSize" min="1" max="20" value="10" onchange="buildTimesTable();"><br>
         <script>
             function buildTimesTable() {
                var timesTable = document.getElementById("timesTable");
@@ -29,10 +29,12 @@
                
                body.appendChild(timesTable);
                
-               for(var i = 1; i < (userInput.value + 1); i++){
+               var value = document.getElementById("tableSize").value;
+               
+               for(var i = 1; i < value; i++){
                     var row = document.createElement("tr");
                     timesTable.appendChild(row);
-                    for(var j = 1; j < 11; j++){
+                    for(var j = 1; j < value; j++){
                         var column = document.createElement("td");
                         column.textContent = i * j;
                         row.appendChild(column);
