@@ -31,10 +31,10 @@
                
                var value = document.getElementById("tableSize").value;
                
-               for(var i = 0; i < value; i++){
+               for(var i = 1; i < value; i++){
                     var row = document.createElement("tr");
                     timesTable.appendChild(row);
-                    for(var j = 0; j < value; j++){
+                    for(var j = 1; j < value; j++){
                         var column = document.createElement("td");
                         column.textContent = i * j;
                         row.appendChild(column);
