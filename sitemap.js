@@ -4,9 +4,9 @@ buildMap(nomer){
   var listItem = document.createElement('LI');
   ele.appendChild(list);
   
-  var listItem = document.createElement('LI');
+  var listItem1 = document.createElement('LI');
   var list1.textContent = "Home";
-  listItem.appendChild(list1);
+  listItem1.appendChild(list1);
   list.appendChild(listItem);
   
 /*  var list1 = document.createElement("li");
