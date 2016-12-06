@@ -1,8 +1,8 @@
 function buildMap(x){
-    var y = document.getElementById(x);
+    var z = document.getElementById(x);
     var bullet = document.createElement('UL');
     var listItem = document.createElement('LI');
-    y.appendChild(bullet);
+    z.appendChild(bullet);
     
     var linkHome = document.createElement('A');
     var listItem = document.createElement('LI');
