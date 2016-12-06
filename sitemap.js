@@ -1,8 +1,8 @@
 function buildMap(x){
-    var z = document.getElementById(x);
+    var y = document.getElementById(x);
     var bullet = document.createElement('UL');
     var listItem = document.createElement('LI');
-    z.appendChild(bullet);
+    y.appendChild(bullet);
     
     var linkIndex = document.createElement('A');
     var listItem = document.createElement('LI');
@@ -13,7 +13,7 @@ function buildMap(x){
     
     var linkBio = document.createElement('A');
     var listItem = document.createElement('LI');
-    linkBio.setAttribute("href", "bio.html");
+    linkBio.setAttribute("href", "aboutme.html");
     linkBio.textContent = "Bio";
     listItem.appendChild(linkBio);
     bullet.appendChild(listItem);
@@ -67,10 +67,5 @@ function buildMap(x){
     nestedListItem.appendChild(linkMultiplication);
     nestedList.appendChild(nestedListItem);
     
-    var linkMultiplication2 = document.createElement('A');
-    var nestedListItem = document.createElement('LI');
-    linkMultiplication2.setAttribute("href", "betterMultTable.html");
-    linkMultiplication2.textContent = "More Multiplication";
-    nestedListItem.appendChild(linkMultiplication2);
-    nestedList.appendChild(nestedListItem);
+
 }
