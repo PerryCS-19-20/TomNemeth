@@ -24,10 +24,12 @@ buildMap(nomer){
   sub1list7.textContent = "Multiplication Table";
 */  
   
-  var para = document.createElement("li");                      // Create a <li> element
-  var t = document.createTextNode("This is a paragraph.");      // Create a text node
-  para.appendChild(t);                                          // Append the text to <li>
-  document.getElementById("nomer").appendChild(para);           // Append <li> 
+  var para = document.createElement("ul");
+  var list = document.createElement("li");
+  var t = document.createTextNode("This is a paragraph.");      
+  list.appendChild(t);
+  para.appendChild(list);
+  document.getElementById("nomer").appendChild(para);            
   
   //ele.appendChild((document.createElement("ul")));
   
