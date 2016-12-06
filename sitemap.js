@@ -1,1 +1,3 @@
-buildMap(id){
+buildMap(nomer){
+  var ele = document.getElementById(nomer);
+  
