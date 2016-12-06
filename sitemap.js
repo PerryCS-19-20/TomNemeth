@@ -8,7 +8,7 @@ function buildMap(x){
     var listItem = document.createElement('LI');
     linkHome.setAttribute("href", "index.html");
     linkHome.textContent = "Home";
-    listItem.appendChild(linkIndex);
+    listItem.appendChild(linkHome);
     bullet.appendChild(listItem);
     
     var linkBio = document.createElement('A');
@@ -23,14 +23,14 @@ function buildMap(x){
     bullet.appendChild(listItem);
     
     var List2 = document.createElement('UL');
-    listItem.appendChild(nestedList);
+    listItem.appendChild(List2);
     
     var linkBreakout = document.createElement('A');
     var subListItem = document.createElement('LI');
     linkBreakout.setAttribute("href", "breakout.html");
     linkBreakout.textContent = "Something that resembles Breakout";
     subListItem.appendChild(linkBreakout);
-    List2.appendChild(nestedListItem);
+    List2.appendChild(subListItem);
     
     var linkJavaEvent = document.createElement('A');
     var subListItem = document.createElement('LI');
