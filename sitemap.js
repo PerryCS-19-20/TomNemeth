@@ -4,6 +4,11 @@ buildMap(nomer){
   var listItem = document.createElement('LI');
   ele.appendChild(list);
   
+  var listItem = document.createElement('LI');
+  var list1.textContent = "Home";
+  listItem.appendChild(list1);
+  list.appendChild(listItem);
+  
 /*  var list1 = document.createElement("li");
   var list2 = document.createElement("li");
   var list3 = document.createElement("li");
