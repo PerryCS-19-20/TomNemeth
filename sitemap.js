@@ -34,7 +34,7 @@ function buildMap(x){
     
     var linkJavaEvent = document.createElement('A');
     var subListItem = document.createElement('LI');
-    linkJavaEvent.setAttribute("href", "background-game.html");
+    linkJavaEvent.setAttribute("href", "backgroundgame.html");
     linkJavaEvent.textContent = "JavaScript Events";
     subListItem.appendChild(linkJavaEvent);
     List2.appendChild(subListItem);
