@@ -66,12 +66,6 @@
             document.getElementById(num).innerHTML = "x"
           }
           player++;
-        }else if(won == true){
-          if(player % 2 == 0){
-            alert('X is the winner!');
-          }else{
-            alert('O is the winner!');
-          }
         }
       }
       
@@ -86,6 +80,11 @@
         c1.style.backgroundColor = "yellow";
         c2.style.backgroundColor = "yellow";
         c3.style.backgroundColor = "yellow";
+        if(player % 2 == 0){
+            alert('X is the winner!');
+        }else{
+            alert('O is the winner!');
+          }
       }
     }
     
