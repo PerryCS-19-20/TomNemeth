@@ -6,7 +6,9 @@
 background-color: grey;
 }
 
-
+#menubar .active {
+    background-color: #4CAF50;
+}
 
 #menubar > ul {
 	position: relative;
