@@ -15,8 +15,9 @@
         </style>
         <script src="sitemap.js"></script>
     </head>
-    <body onload="buildTimesTable();" onload="buildMap('menubar');">
+    <body onload="buildTimesTable();buildMap('menubar');">
         <div id="menubar">
+        </div>
         <h1>Multiplication Table</h1>
         Table Size:<input type="range" id="tableSize" min="2" max="21" value="11" onchange="buildTimesTable();"><br>
         <script>
@@ -50,7 +51,6 @@
                    }
                }        
             }
-        </script>
-        </div>
+        </script>        
     </body>
 </html>
