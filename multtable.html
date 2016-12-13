@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Times Table</title>
+        <link rel="stylesheet" type="text/css" href="menubar.css">
         <style>
             table, td, th {
                 border: solid 1px;
@@ -14,6 +15,7 @@
         </style>
     </head>
     <body onload="buildTimesTable();">
+        <div id="menubar">
         <h1>Multiplication Table</h1>
         Table Size:<input type="range" id="tableSize" min="2" max="21" value="11" onchange="buildTimesTable();"><br>
         <script>
@@ -48,5 +50,6 @@
                }        
             }
         </script>
+        </div>
     </body>
 </html>
