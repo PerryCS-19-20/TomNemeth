@@ -3,46 +3,41 @@
 	position: relative;
 	padding: 0px;
 	display: block;
-background-color: grey;
+	background-color: grey;
+	font-family: "Helvetica";
 }
 
-#menubar .active {
+#menubar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+#menubar li {
+    float: left;
+}
+
+#menubar li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#menubar li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+#menubar li a.active {
+    color: white;
     background-color: #4CAF50;
 }
 
-#menubar > ul {
-	position: relative;
-	display:  inline-block;
-	text-decoration: none;
-	list-style-type: none;
-margin: 0;
-padding: 0;
-}
-
-
-
-#menubar > ul > li {
-display: inline-block;
-padding: 8px;
-}
-
-
- 
-#menubar ul li {
-	list-style: none;
-text-indent: 0px;
-}
-
-
-#menubar ul ul {
-	display: none;
-	position: absolute;
-background-color: lightgrey;
-padding: 0px;
-}
-
-
-/* Show dropdown when hovering over its menu */
+/* Show dropdown when hovering over its menu 
 #menubar ul li:hover ul,
 #menubar ul li:focus ul,
 #menubar ul li:active ul {
@@ -50,17 +45,10 @@ padding: 0px;
 }
 
 
-/* Make menu links look normal */
-#menubar a {
-	display: block;
-color: black;
-	padding: 8px;
-	text-decoration: none;
-}
 
 
-/* Change the link color on hover */
 #menubar ul ul li a:hover {
 	background-color: grey;
 	color: white;
 }
+*/
