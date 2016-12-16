@@ -37,6 +37,9 @@
     background-color: #4CAF50;
 }
 
+#menubar ul ul{
+	display: none;
+}
 
 #menubar ul li:hover ul,
 #menubar ul li:focus ul,
